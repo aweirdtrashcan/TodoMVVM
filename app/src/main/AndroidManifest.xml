@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TodoMVVM"
         tools:targetApi="31">
         <activity
+            android:name=".views.addtodo.AddTodoActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.main.MainActivity"
             android:exported="true">
             <intent-filter>
