@@ -8,6 +8,7 @@ class MainViewModelFactory(private val repository: MainRepository) : ViewModelPr
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
             MainViewModel(this.repository) as T
         } else {
             throw IllegalArgumentException("Unknown ViewModel")
